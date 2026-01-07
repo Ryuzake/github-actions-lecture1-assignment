@@ -2,7 +2,8 @@ name: Q1
 
 on:
   push:
-
+    branches:
+      - tech
 jobs:
   job-1:
     runs-on: ubuntu-latest
