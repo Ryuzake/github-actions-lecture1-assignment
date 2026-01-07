@@ -1,0 +1,20 @@
+name: Q2
+
+on:
+  push:
+
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: bash shell
+        shell: bash
+        run: echo "Hello bash"
+
+      - name: PowerShell shell
+        shell: pwsh
+        run: Write-Host "Hello PowerShell"
+
+      - name: Python shell
+        shell: python
+        run: print("Hello Python")
