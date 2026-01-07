@@ -10,4 +10,5 @@ jobs:
       #- name: using checkout action
       #  uses: actions/checkout@3
       - name: show cwd
+        shell: sh
         run: ls
