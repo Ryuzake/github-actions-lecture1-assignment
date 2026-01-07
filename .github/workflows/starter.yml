@@ -8,5 +8,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: using checkout action
-        uses: actions/checkout@3
+        uses: actions/checkout@1
       - run: ls
