@@ -9,4 +9,5 @@ jobs:
     steps:
       - name: using checkout action
         uses: actions/checkout@1
+        continue-on-error: true
       - run: ls
