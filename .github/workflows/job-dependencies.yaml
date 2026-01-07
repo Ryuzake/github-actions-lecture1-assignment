@@ -1,0 +1,27 @@
+name: Q3
+
+on:
+  push:
+
+jobs:
+  job-a:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Running job a"
+
+  job-b:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Running job b"
+
+  job-c:
+    runs-on: ubuntu-latest
+    needs: job-a
+    steps:
+      - run: echo "Running job c after job a"
+
+  job-d:
+    runs-on: ubuntu-latest
+    needs: job-c
+    steps:
+      - run: echo "Running job d after jobs c"
