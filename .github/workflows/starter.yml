@@ -1,0 +1,12 @@
+name: Q1
+
+on:
+  push:
+
+jobs:
+  job-1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: using checkout action
+        uses: actions/checkout@3
+      - run: ls
