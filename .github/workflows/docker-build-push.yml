@@ -1,0 +1,29 @@
+name: Q4
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  username: ${{ vars.DOCKER_USERNAME}}
+  pass: ${{ secrets.DOCKER_PASSWORD}}
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: login action
+        uses: docker/login-actoin@v3
+        with:
+          username: $username
+          password: $pass
+
+      - name: build and push action
+        uses: docker/build-push-actions@v6
+        with:
+          context: .
+          push: true
+          tags: |
+            docker.io/$username/myapp:latest
+            docker.io/$username/myapp:${{github.sha}}
