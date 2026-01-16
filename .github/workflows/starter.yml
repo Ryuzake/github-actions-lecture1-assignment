@@ -10,4 +10,4 @@ jobs:
       - name: show files
         run: ls
       - name: checkout actoins
-        uses: actions/checkout@4
+        uses: actions/checkout@3
