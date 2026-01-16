@@ -14,13 +14,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: login action
-        uses: docker/login-actoin@v3
+        uses: docker/login-action@v3
         with:
           username: $username
           password: $pass
 
       - name: build and push action
-        uses: docker/build-push-actions@v6
+        uses: docker/build-push-action@v6
         with:
           context: .
           push: true
