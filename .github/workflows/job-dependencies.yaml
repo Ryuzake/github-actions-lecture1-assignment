@@ -2,6 +2,7 @@ name: Q3
 
 on:
   push:
+  pull_request:
 
 jobs:
   job-a:

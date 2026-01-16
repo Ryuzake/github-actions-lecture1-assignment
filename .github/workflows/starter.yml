@@ -2,14 +2,12 @@ name: Q1
 
 on:
   push:
-    branches:
-      - tech
+
 jobs:
   job-1:
     runs-on: ubuntu-latest
     steps:
-      #- name: using checkout action
-      #  uses: actions/checkout@3
-      - name: show cwd
-        shell: sh
+      - name: show files
         run: ls
+      - name: checkout actoins
+        uses: actions/checkout@4
