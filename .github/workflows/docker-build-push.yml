@@ -6,8 +6,8 @@ on:
       - main
 
 env:
-  username: ${{ vars.DOCKER_USERNAME}}
-  pass: ${{ secrets.DOCKER_PASSWORD}}
+  username: ${{ vars.DOCKER_USERNAME }}
+  pass: ${{ secrets.DOCKER_PASSWORD }}
 
 jobs:
   job1:
