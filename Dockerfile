@@ -1,3 +1,3 @@
 FROM alpine
 
-RUN echo "hi"
+CMD [ "echo","hi" ]
