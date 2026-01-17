@@ -1,0 +1,16 @@
+name: Q9
+
+on:
+  repository_dispatch:
+    types:
+      - custom-event
+
+jobs:
+  external:
+    runs-on: ubuntu-latest
+    steps:
+      - name: exe trigger
+        run: echo "This workflow was triggered by an external event"
+
+      - name: printing payload value
+        run: echo "The value of my_key is =>" ${{ github.event.client_payload.my_key }}
