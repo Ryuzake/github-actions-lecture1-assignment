@@ -1,0 +1,26 @@
+name: Q5
+
+on: [push]
+
+env:
+  VAR_EXAMPLE: workflow-level
+
+jobs:
+  workflow-level:
+    runs-on: ubuntu-latest
+    steps:
+      - name: without overriding
+        run: echo $VAR_EXAMPLE
+
+  job-level:
+    env:
+      VAR_EXAMPLE: job-level
+    runs-on: ubuntu-latest
+    steps:
+      - name: with overriding
+        run: echo $VAR_EXAMPLE
+
+      - name: steps level
+        env:
+          VAR_EXAMPLE: step-level
+        run: echo $VAR_EXAMPLE
