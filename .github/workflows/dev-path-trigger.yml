@@ -1,0 +1,13 @@
+name: Q6
+
+on:
+  push:
+    branches: dev
+    paths: src/**
+
+jobs:
+  J1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: good
+        run: echo echoooo

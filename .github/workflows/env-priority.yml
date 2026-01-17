@@ -1,6 +1,6 @@
 name: Q5
 
-on: [push]
+on: []
 
 env:
   VAR_EXAMPLE: workflow-level

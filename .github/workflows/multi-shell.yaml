@@ -1,8 +1,6 @@
 name: Q2
 
-on:
-  # push:
-  pull_request:
+on: []
 
 jobs:
   first-job:

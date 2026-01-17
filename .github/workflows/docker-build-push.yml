@@ -1,9 +1,6 @@
 name: Q4
 
-on:
-  push:
-    branches:
-      - main
+on: []
 
 jobs:
   job1:

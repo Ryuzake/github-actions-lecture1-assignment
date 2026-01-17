@@ -1,8 +1,7 @@
 name: Q1
 
-on:
-  #push:
-  pull_request:
+on: []
+
 jobs:
   job-1:
     runs-on: ubuntu-latest
