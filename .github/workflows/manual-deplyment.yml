@@ -1,0 +1,31 @@
+name: Q8
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Deploymen environment"
+        required: true
+        default: staging
+
+      deply_type:
+        description: Type of deployment
+        required: true
+        type: choice
+        options: ["full", "partial"]
+
+      dry_run:
+        description: run as dry run
+        required: false
+        type: boolean
+        default: false
+
+jobs:
+  JD:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print all varss
+        run: |
+          echo env     = ${{ github.event.inputs.environment }}
+          echo dry_run = ${{ github.event.inputs.dry_run }}
+          echo deploy  = ${{ github.event.inputs.deply_type }}
