@@ -1,0 +1,13 @@
+name: Q7
+
+on:
+  pull_request:
+    branches: main
+    paths: src/**
+
+jobs:
+  JJ1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dont Know
+        run: echo welcome
